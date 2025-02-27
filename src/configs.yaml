@@ -1,0 +1,25 @@
+path:
+  data_path: '/home/wooh/project/solar_tsf_asos_hourly/data/processed_asos_hourly.csv'
+  save_dir: '/home/wooh/project/solar_tsf_asos_hourly/results'
+  model_dir: '/home/wooh/project/solar_tsf_asos_hourly/models'
+
+data:
+  train_start: '2017-01-01 00:00:00'
+  train_end: '2022-12-31 23:59:59'
+  valid_end: '2023-12-31 23:59:59'
+  test_end: '2024-12-31 23:59:59'
+
+params:
+  seed: 42
+  look_back: 12
+  horizon: 6
+  embed_dims: 10
+  hidden_dims: 256
+  num_layers: 3
+  num_epochs: 1000
+  batch_size: 32
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  patience: 200
+  gradient_clip: 1.0
+  dropout: 0.1
